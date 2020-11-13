@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  researcher: MyString
+  study_question: MyText
+  start_date: 2020-11-13
+  budget: MyString
+  login_accounts: MyString
+  funding_source: MyString
+  population_size: MyString
+  length_of_study: MyString
+  communication: MyString
+  platform: MyString
+  computation: MyString
+  third_party: MyString
+  content: MyString
+  HIPAA: MyString
+
+two:
+  researcher: MyString
+  study_question: MyText
+  start_date: 2020-11-13
+  budget: MyString
+  login_accounts: MyString
+  funding_source: MyString
+  population_size: MyString
+  length_of_study: MyString
+  communication: MyString
+  platform: MyString
+  computation: MyString
+  third_party: MyString
+  content: MyString
+  HIPAA: MyString
