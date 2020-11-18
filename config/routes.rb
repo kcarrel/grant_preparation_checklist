@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'grant#new'
+  root 'grants#new'
+  resources :grants
 end

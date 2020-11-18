@@ -1,0 +1,59 @@
+.row.align-items-center.mt-2.bg-white.shadow
+  .col-12
+    .card-header
+      Grant Preparation Checklist
+    .card-body
+      = form_with model: Grant.new do |f|
+        .form-group
+          .row 
+            .col
+              = f.label :researcher, class: "hidden control-label" 
+              = f.text_field :researcher,  class: 'form-control'
+            .col
+              = f.label :start_date, class: "hidden control-label" 
+              .form-inline
+                = f.date_select :start_date, {start_year: Date.current.year, end_year: Date.current.year + 2}, {class: 'form-control'}
+          .row
+            .col
+              = f.label :budget, class: "hidden control-label" 
+              = f.text_field :budget,  class: 'form-control'
+            .col
+              = f.label :login_accounts, class: "hidden control-label" 
+              = f.text_field :login_accounts,  class: 'form-control'
+          .row
+            .col
+              = f.label :funding_source, class: "hidden control-label" 
+              = f.text_field :funding_source,  class: 'form-control'
+            .col
+              = f.label :population_size, class: "hidden control-label" 
+              = f.text_field :population_size,  class: 'form-control'
+          .row
+            .col
+              = f.label :length_of_study, class: "hidden control-label" 
+              = f.text_field :length_of_study,  class: 'form-control'
+            .col
+              = f.label :communication, class: "hidden control-label" 
+              = f.text_field :communication,  class: 'form-control'
+          .row
+            .col
+              = f.label :platform, class: "hidden control-label" 
+              = f.text_field :platform,  class: 'form-control'
+            .col
+              = f.label :computation, class: "hidden control-label" 
+              = f.text_field :computation,  class: 'form-control'
+          .row
+            .col
+              = f.label :third_party, class: "hidden control-label" 
+              = f.text_field :third_party,  class: 'form-control'
+            .col
+              = f.label :content, class: "hidden control-label" 
+              = f.text_field :content,  class: 'form-control'
+          .row
+            .col
+              = f.label :HIPAA, class: "hidden control-label" 
+              = f.text_field :HIPAA,  class: 'form-control' 
+        .form-group
+          = f.label :study_question, class: "hidden control-label" 
+          = f.text_area :study_question, rows: 2, class: 'form-control'
+        .mr-auto.p-2.d-flex.justify-content-end
+          = f.submit "Save Grant", class: 'btn', id: 'submit-btn'

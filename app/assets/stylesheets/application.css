@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ #submit-btn {
+    background-color: #07402B;
+    border: 1px solid black;
+    color: floralwhite;
+ }
+
