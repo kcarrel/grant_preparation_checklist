@@ -1,0 +1,13 @@
+.row.mt-2
+  .col-sm-12.table-responsive
+    %table.datatable.table.table-bordered.table-hover.shadow#table-participants
+      %thead
+        %tr.table-bg.text-white
+          %th Researcher
+          %th Start Date
+        
+      %tbody
+        - @grants.each do |grant|
+          %tr{ "data-pid" => grant.id }
+            %td= grant.researcher
+            %td= grant.start_date
