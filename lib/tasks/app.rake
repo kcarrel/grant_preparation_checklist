@@ -14,7 +14,8 @@ namespace :app do
             "engagement/tracking",
             "SOAP APIs",
             "pre-written",
-            "Unsure"
+            "Unsure",
+            true
         ], ["Chef", 
             "What is the best food", 
             "01/02/21", 
@@ -28,7 +29,8 @@ namespace :app do
             "engagement/tracking",
             "SOAP APIs",
             "pre-written",
-            "Unsure"
+            "Unsure", 
+            true
         ]]
         grants.each do |grant_data|
             grant = Grant.create researcher: grant_data[0],
@@ -44,7 +46,8 @@ namespace :app do
                     computation: grant_data[10],
                     third_party: grant_data[11],
                     content: grant_data[12],
-                    HIPAA: grant_data[13]
+                    HIPAA: grant_data[13],
+                    active: grant_data[14]
         end
     end
 end
